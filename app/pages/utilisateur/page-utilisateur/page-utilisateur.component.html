@@ -1,0 +1,90 @@
+<div class="col">
+  <div class="row m-3">
+    <div class="col-md-8 p-0">
+      <h1>Liste des utilisateurs</h1>
+    </div>
+    <div class="col-md-4 text-right">
+      <app-boutton-action
+      [isExporterVisible] = false
+      [isImporterVisible] = false
+        (clickEvent)="nouvelUtilosateur()"
+      ></app-boutton-action>
+    </div>
+  </div>
+  <div class="col m-3">
+ 
+
+
+    <div *ngFor="let e of userdata" class="row mb-1 mr-0 custom-border">
+      <div class="col-md-1 custom-border-right p-1 text-center mb-1 mt-1 ">
+        <img src="assets/product.png" width="100px" height="100px">
+      </div>
+    
+      <!--  Details article-->
+      <div class="col-md-5 custom-border-right mb-1 mt-1 ">
+        <div class="col">
+          <div class="row">
+            <div class="col-md-1"><i class="fas fa-info-circle blue-color"></i></div>
+            <div class="col-md-10">{{e.nom}} </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"><i class="fas fa-info-circle blue-color"></i></div>
+            <div class="col-md-10">{{e.prenom}} </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"><i class="fas fa-phone-alt blue-color"></i></div>
+            <div class="col-md-10">{{e.email}}</div>
+          </div>
+        </div>
+      </div>
+    
+      <!--  details categorie-->
+      <div class="col-md-3 custom-border-right mb-1 mt-1 ">
+        <div class="col">
+          <div class="row">
+            <div class="col-md-1"><i class="fas fa-home blue-color"></i></div>
+            <div class="col-md-10">{{e.adresse.adresse1}}<br>
+                                  {{e.adresse.adresse2}}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"><i class="fas fa-map-marker-alt blue-color"></i></div>
+            <div class="col-md-10">{{e.adresse.ville}} </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"><i class="fas fa-globe-europe blue-color"></i></div>
+            <div class="col-md-10">{{e.adresse.pays}}</div>
+          </div>
+        </div>
+      </div>
+    
+      <!--  boutons action-->
+      <div class="col-md-3 mb-1 mt-1 ">
+        <div class="row">
+          <div class="col-md-4">
+            <button type="button" class="btn btn-link">
+              <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
+            </button>
+          </div>
+          <div class="col-md-4">
+            <button (click)="delete(e.id)" type="button" class="btn btn-link">
+              <i class="fas fa-trash-alt"></i>&nbsp;Supprimer
+            </button>
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-link ">
+              <i class="far fa-list-alt"></i>&nbsp;Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    
+  </div>
+  <div class="row mb-3">
+    <div class=" col-md-12 text-center">
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+
+</div>

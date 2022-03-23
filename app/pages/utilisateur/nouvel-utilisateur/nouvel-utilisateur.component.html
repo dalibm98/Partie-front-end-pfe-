@@ -1,0 +1,72 @@
+<div class="col mb-3">
+  <div class="col-md-12 mb-3">
+    <img src="assets/product.png" class="rounded-circle" width="200px" height="200px" />
+  </div>
+  <hr>
+  <div class="col-md-12">
+    <div class="col-md-12 mb-3">
+      <h2><i class="fas fa-info-circle blue-color"></i>&nbsp;Information de l'utilisateur</h2>
+    </div>
+    <div class="col-md-12">
+      <form>
+        <div class="row mb-3">
+          <div class="col">
+            <input  [(ngModel)]="utilisateurDto.nom" name="nom" type="text" class="form-control" placeholder="Nom">
+          </div>
+          <div class="col">
+            <input  [(ngModel)]="adresse.adresse1" name="adresse1" type="text" class="form-control" placeholder="Adresse 1">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input name="prenom"  [(ngModel)]="utilisateurDto.prenom" type="text" class="form-control" placeholder="Prenom">
+          </div>
+          <div class="col">
+            <input  [(ngModel)]="adresse.adresse2" name="adresse2" type="text" class="form-control" placeholder="Adresse 2">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input name="email" [(ngModel)]="utilisateurDto.email" type="text" class="form-control" placeholder="E-mail">
+          </div>
+          <div class="col">
+            <input  [(ngModel)]="adresse.ville" name="ville" type="text" class="form-control" placeholder="Ville">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input  [(ngModel)]="utilisateurDto.dateDeNaissance" name="dateDeNaissance" type="date" class="form-control" placeholder="Telephone">
+          </div>
+          <div class="col">
+            <input  [(ngModel)]="adresse.codePostale" name="codePostale" type="text" class="form-control" placeholder="Code postal">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <select class="form-control" name="roleName"  [(ngModel)]="role.roleName">
+              <option value="">Role</option>
+              <option value="ADMIN">ADMIN</option>
+              <option value="USER">USER</option>
+            </select>
+          </div>
+          <div class="col">
+            <input  [(ngModel)]="adresse.pays" name="pays" type="text" class="form-control" placeholder="Pays">
+          </div>
+        </div>
+       
+        <div class="col-md-12 text-right">
+          <button class="btn btn-danger mr-3" (click)="cancel()">
+            <i class="fas fa-ban"></i>&nbsp;
+            Annuler
+          </button>
+          <button class="btn btn-primary" (click)="enregistrer()" >
+            <i class="fas fa-save"></i>&nbsp;
+            Enregitrer
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+</div>

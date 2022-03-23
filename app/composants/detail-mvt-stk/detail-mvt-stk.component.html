@@ -1,0 +1,46 @@
+<div *ngFor="let el of lisMvt" >
+  <div *ngIf="el" style="    display: flex;
+  border: solid 1px;">
+
+  <!--  Details article-->
+  
+      <div style="
+    border-right: solid 1px;
+        width: 25%;
+    text-align: center;
+">{{el.dateMvt | date: 'dd MMM yyyy hh:mm a'}}</div>
+   
+
+  <!--  details categorie-->
+ 
+      <div style="
+    border-right: solid 1px;
+        width: 22%;
+    text-align: center;
+">
+        <h5>
+         {{el.quantite}}
+        </h5>
+     
+  </div>
+
+ 
+      <div style="
+    border-right: solid 1px;
+        width: 22%;
+    text-align: center;
+">
+        <h5>{{el.typeMvt}} </h5>
+      </div>
+ 
+
+  <!--  boutons action-->
+
+    <div style="   width: 28%;
+    text-align: center;">
+      <h5>{{el.sourceMvt}}</h5>
+
+    </div>
+  
+</div>
+</div>

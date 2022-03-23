@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-8">
+    
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-9 text-right">
+        <span>{{connectedUser.nom}}&nbsp;</span>
+        <i class="fas fa-user"></i>
+      </div>
+
+      <div class="col-md-3">
+        <button  (click)="showsubMenu()">
+        <a href="javascript:void(0);" >
+          <i class="fas fa-bars" ></i>
+        </a>
+      </button>
+          
+        
+      </div>
+    </div>
+  </div>
+ 
+</div>
+<div style="position: relative;left: 90%;" *ngIf="show">
+  <a href="javascript:void(0);" [routerLink]="['/profil']">
+    <i class="fas fa-user-alt" >Profil</i>
+  </a><br>
+  <a href="javascript:void(0);" [routerLink]="['/login']">
+    <i class="fas fa-sign-out-alt" >Log Out</i>
+  </a>
+</div>

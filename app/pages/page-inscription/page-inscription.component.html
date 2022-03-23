@@ -1,0 +1,51 @@
+<div class="container my-container">
+  <div class="card justify-content-md-center">
+    <div class="card-header text-center">
+      <h3>S'inscrire</h3>
+    </div>
+    <div class="card-body">
+      <div class="alert alert-danger" *ngIf="errorsMsg.length > 0">
+        <div *ngFor="let msg of errorsMsg">
+          <span >{{msg}}</span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Nom" [(ngModel)]="entrepriseDto.nom">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Code fiscal" [(ngModel)]="entrepriseDto.codeFiscal">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="entrepriseDto.email">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Adresse 1" [(ngModel)]="adresse.adresse1">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Adresse 2" [(ngModel)]="adresse.adresse2">
+      </div><div class="mb-3">
+      <input type="text" class="form-control" placeholder="Ville" [(ngModel)]="adresse.ville">
+    </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Code postal" [(ngModel)]="adresse.codePostale">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Pays" [(ngModel)]="adresse.pays" >
+      </div>
+      <div class="mb-3">
+        <textarea type="password" class="form-control" placeholder="Description" [(ngModel)]="entrepriseDto.description"></textarea>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Numero de telephone" [(ngModel)]="entrepriseDto.numTel">
+      </div>
+
+      <div class="mb-3 d-flex justify-content-between">
+        <a [routerLink]="['/login']" class="btn btn-link">Se connecter</a>
+        <button type="button" class="btn btn-primary" (click)="inscrire()">
+          <i class="fas fa-check"></i>&nbsp;S'inscrire
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
